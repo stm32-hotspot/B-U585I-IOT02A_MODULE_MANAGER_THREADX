@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Release_Notes.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Release Notes for STM32CubeU5 Firmware Package</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="./Release_Notes_files/mini-st_2020.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/_htmresc/favicon.png">
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-stm32cubeu5-firmware-package">Release Notes for <mark>STM32CubeU5 Module Manger Demo Package&nbsp;</mark></h1>
+<p>Copyright © 2022 STMicroelectronics<br>
+</p>
+<a href="https://www.st.com/" class="logo"><img src="./Release_Notes_files/st_logo_2020.png" alt="ST logo"></a>
+</center>
+<h1 id="purpose">Purpose</h1>
+<p><span style="font-size: 1rem; color: var(--fore-color);">This Module Manager Demo and the related module provide a comprehensive&nbsp; example of ThreadX Module Manager feature. The Module data area isolation is also shown exploiting the MPU.</span><br></p><p>The demo is built exploiting the STMCube FW and its HAL, BSP and drivers stack. Also the Microsoft ThreadX RTOS and some of related middleware are included.</p><p><br></p><p style="font-size: 13.5px; margin: var(--universal-margin);"><span style="font-weight: bold;">STMCube is an STMicroelectronics original initiative to ease developers life by reducing development efforts, time and cost.</span></p><p style="font-size: 13.5px; margin: var(--universal-margin);">STM32Cube covers STM32 portfolio.</p><div><br></div>
+<p><br></p>
+<figure>
+<img src="./Release_Notes_files/STM32Cube.bmp" alt="STM32Cube"><figcaption>STM32Cube</figcaption>
+</figure>
+<p>The <strong>drivers</strong> provided within this package <strong>support</strong> the <strong>&nbsp;STM32U585.</strong></p>
+<ul>
+<li>For quick getting started with the STM32CubeU5 firmware package, refer to <a href="https://www.st.com/resource/en/user_manual/um2883-getting-started-with-stm32cubeu5-for-stm32u5-series-stmicroelectronics.pdf">UM2883</a> you can download firmware updates and all the latest documentation from <a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/www.st.com/stm32cubeU5">www.st.com/stm32cubeU5</a></li>
+<li>Below links to the most useful documents:
+<ul>
+<li><a href="https://www.st.com/resource/en/user_manual/um2883-getting-started-with-stm32cubeu5-for-stm32u5-series-stmicroelectronics.pdf">UM2883: Getting started with STM32CubeU5 for STM32U5 Series</a></li>
+<li><a href="https://www.st.com/resource/en/user_manual/um2911-description-of-stm32u5-hal-and-lowlayer-driver-stmicroelectronics.pdf">UM2911: Description of STM32U5 HAL and low-layer driver</a></li>
+<li><a href="https://www.st.com/resource/en/user_manual/um2298-stm32cube-bsp-drivers-development-guidelines-stmicroelectronics.pdf">UM2298: STM32Cube BSP drivers development guidelines</a></li>
+<li><a href="https://www.st.com/resource/en/user_manual/um2913-stm32cubeu5-bu585iiot02a-web-server-demonstration-firmware-stmicroelectronics.pdf">UM2913: STM32CubeU5 B-U585I-IOT02A web server demonstration firmware</a></li>
+<li><a href="https://www.st.com/resource/en/user_manual/um2912-stm32cubeu5-stm32u575iev-demonstration-firmware-stmicroelectronics.pdf">UM2912: STM32CubeU5 STM32U575I-EV demonstration firmware</a><br>
+</li>
+<li><a href="https://www.st.com/resource/en/user_manual/um2851-getting-started-with-stm32cubeu5-tfm-application-stmicroelectronics.pdf">UM2851: Getting started with STM32CubeU5 TFM application</a></li>
+<li><a href="https://www.st.com/resource/en/user_manual/um2852-stm32u585xx-security-guidance-for-psa-certified-level-3-with-sesip-profile-stmicroelectronics.pdf">UM2852: STM32U585xx security guidance for PSA Certified™ Level 3 with SESIP Profile</a></li>
+</ul></li>
+</ul>
+</div>
+<div class="col-sm-12 col-lg-8">
+<h2 id="update-history"><strong>Update History</strong></h2>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" checked="" aria-hidden="true"> <label for="collapse-section4" checked="" aria-hidden="true"><strong>V1.0.0 / 18-July-2022</strong></label>
+<div>
+<h2 id="main-changes">Main Changes</h2><ul><li>The current demo, with respect to the original&nbsp; demo available in STM32Cube_FW_U5_V1.1.0 (STM32Cube_FW_U5_V1.1.0\Projects\NUCLEO-U575ZI-Q\Applications\ThreadX\Tx_MPU), was extended adding:</li><li>The FileX middleware with FTP client, DHCP client and SNTP client.&nbsp;</li><li>The LevelX middleware</li><li>The&nbsp; NOR Flash and the related QSPI and DMA drivers&nbsp;</li></ul>
+<h3 id="middlewares-drivers-updates"><span style="font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) ); color: var(--fore-color);">Contents</span><br></h3>
+<h3 id="projects"><strong>Projects</strong></h3><p><span style="font-size: 13.5px; color: var(--fore-color);">The application is able to execute the module "in place" from internal flash or from SRAM and "from file" downloading it from the FTP server and saving it on the file system.&nbsp;</span></p><p><span style="font-size: 13.5px; color: var(--fore-color);">The module debugging capability is also shown (limited to module "execution in place" from internal flash and to IAR EWARM debugger)</span></p>
+<p>This demo use HAL drivers, LL drivers, BSP drivers from STMCube and Azure RTOS from MS. The demo is provided only with IAR EWARM project.</p>
+<ul>
+<li><strong style="font-size: 1rem; color: var(--fore-color);"><br><br>Notes:</strong><br></li></ul>
+<ul>
+<li>The following sequence is needed to disable TrustZone:
+<ul>
+<li>Boot from user Flash memory:
+<ul>
+<li>Make sure that secure and non-secure applications are well loaded and executed (jump done on non-secure application)</li>
+<li>If not yet done, set RDP to level 1 through STM32CubeProgrammer. Then only Hotplug connection is possible during non-secure application execution</li>
+<li>Use a power supply different from ST-LINK in order to be able to connect to the target</li>
+<li>Uncheck the TZEN box and set RDP to level 0 (option byte value 0xAA), then click on Apply</li>
+</ul></li>
+<li>Boot from RSS:
+<ul>
+<li>Make sure to apply a high level on BOOT0 pin (make sure that nSWBOOT0 Option Byte is checked)</li>
+<li>If not yet done, set RDP to level 1 through STM32CubeProgrammer. Then only Hotplug connection is possible during non-secure application execution</li>
+<li>Use a power supply different from ST-LINK in order to be able to connect to the target</li>
+<li>Uncheck the TZEN box and set RDP to level 0 (option byte value 0xAA), then click on Apply</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Please refer to AN5347 for more details</p><p><br></p>
+<h3 id="components"><strong>Components</strong></h3>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<table>
+<caption><strong>Drivers</strong></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M CMSIS</td>
+<td style="text-align: left;">V5.6.0_cm33</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/CMSIS/docs/General/html/index.html">release notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx CMSIS <span class="icon-st-update"></span></td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U5xx HAL <span class="icon-st-update"></span></td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx NUCLEO <span class="icon-st-update"></span></td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="color: var(--table-body-fore-color); font-size: 0.9rem;">BSP B-U585I-IOT02A&nbsp;</span><br></td></tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="color: var(--table-body-fore-color); font-size: 0.9rem;">BSP Common&nbsp;</span><br></td></tr>
+
+
+
+
+
+
+
+
+<tr class="even">
+<td style="text-align: left;">BSP mx_wifi <span class="icon-st-update"></span></td>
+<td style="text-align: left;">v2.1.12</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/Components/mx_wifi/Release_Notes.html">release notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP mx25lm51245g <span class="icon-st-update"></span></td>
+<td style="text-align: left;">V2.0.8</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/Components/mx25lm51245g/Release_Notes.html">release notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP ov5640 <span class="icon-st-update"></span></td>
+<td style="text-align: left;">V3.2.2</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/Components/ov5640/Release_Notes.html">release notes</a></td></tr>
+</tbody></table><br>
+<table>
+<caption><strong>Middlewares</strong></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td style="text-align: left;">ThreadX <span class="icon-st-update"></span></td>
+<td style="text-align: left;">threadx-6.1.9.220128</td>
+<td style="text-align: left;"><a href="https://github.com/azure-rtos/threadx/releases/tag/v6.1.9_rel">release notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NetXduo <span class="icon-st-update"></span></td>
+<td style="text-align: left;">netxduo-6.1.9.220128</td>
+<td style="text-align: left;"><a href="https://github.com/azure-rtos/netxduo/releases/tag/v6.1.9_rel">release notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">USBX <span class="icon-st-update"></span></td>
+<td style="text-align: left;">usbx-6.1.9.220128</td>
+<td style="text-align: left;"><a href="https://github.com/azure-rtos/usbx/releases/tag/v6.1.9_rel">release notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FileX <span class="icon-st-update"></span></td>
+<td style="text-align: left;">filex-6.1.8.220128</td>
+<td style="text-align: left;"><a href="https://github.com/azure-rtos/filex/releases/tag/r6.1.8_rel">release notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LevelX <span class="icon-st-update"></span></td>
+<td style="text-align: left;">levelx-6.1.9.220128</td>
+<td style="text-align: left;"><a href="https://github.com/azure-rtos/levelx/releases/tag/v6.1.9_rel">release notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cmsis_rtos_threadx <span class="icon-st-update"></span></td>
+<td style="text-align: left;">tx-cmsis-1.0.4.211108</td>
+<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Middlewares/ST/cmsis_rtos_threadx/Release_Notes.html">release notes</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><strong>Utilities</strong></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><br><br></td></tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain <strong>V8.50.9</strong> + ST-LINK, patches available here:
+<ul>
+<li><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Utilities/PC_Software/IDEs_Patches/EWARM/EWARMv8_STM32U57x-58x_V1.3.zip">Utilities\PC_Software\IDEs_Patches\EWARM\EWARMv8_STM32U57x-58x_V1.3.zip</a></li>
+<li>This patch supports STM32U575/585 devices</li>
+<li><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Utilities/PC_Software/IDEs_Patches/EWARM/EWARMv8_STM32U59x-5Ax_V1.0.zip">Utilities\PC_Software\IDEs_Patches\EWARM\EWARMv8_STM32U59x-5Ax_V1.0.zip</a></li>
+<li>This patch supports STM32U595/5A5/599/5A9 devices</li></ul></li>
+</ul>
+<h2 id="supported-devices-and-boards">Supported Devices and boards</h2>
+<ul>
+<li><strong>STM32U575/STM32U585</strong> devices</li>
+<li>B-U585I-IOT02A Discovery board rev.C</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>STM32CubeMX Version: Projects are generated using STM32CubeMX V6.5.0</li>
+<li>The EMW3080B MXCHIP Wi-Fi module firmware used version is V2.1.11 and the way to update your board with it are available at <a href="https://www.st.com/en/development-tools/x-wifi-emw3080b.html">x-wifi-emw3080b</a></li>
+</ul>
+<h2 id="known-limitations">Known Limitations</h2>
+<ul>
+<li>BSP MXCHIP: Access point mode with the TCP/IP mode on STM32 host is not functional. It works when TCP/IP runs on the EMW3080B module</li>
+<li>The NUCLEO-U575ZI-Q\Applications\ThreadX\Tx_MPU Project Architecture with STM32CubeIDE is not aligned with recommended STM32CubeIDE Architecture.(Will be reworked for next Release V1.2.0)</li>
+</ul>
+<h2 id="backward-compatibility">Backward Compatibility</h2>
+<p>N/A</p></div></div><div class="collapse"><div><ul>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<footer class="sticky">
+<p>For complete documentation on STM32 Microcontrollers  , visit: <span style="font-color: blue;"><a href="http://www.st.com/stm32">www.st.com/stm32</a></span></p>
+This release note uses up to date web standards and, for this reason, should not be opened with Internet Explorer but preferably with popular browsers such as Google Chrome, Mozilla Firefox, Opera or Microsoft Edge.
+</footer>
+
+
+</body></html>
