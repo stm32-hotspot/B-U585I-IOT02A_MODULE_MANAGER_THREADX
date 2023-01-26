@@ -32,7 +32,6 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32u5xx_hal_def.h"
-#include "stm32u5xx_nucleo.h"
 #include <stdio.h>
 #include "mx_wifi_conf.h"
 /* USER CODE END Includes */

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0090)file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Release_Notes.html -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Release Notes for STM32CubeU5 Firmware Package</title>
+  <title>Release Notes for STM32CubeU5 Module Manger Demo Package</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -15,7 +14,7 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  <link rel="icon" type="image/x-icon" href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/_htmresc/favicon.png">
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png">
 </head>
 <body>
 <div class="row">
@@ -34,7 +33,7 @@
 </figure>
 <p>The <strong>drivers</strong> provided within this package <strong>support</strong> the <strong>&nbsp;STM32U585.</strong></p>
 <ul>
-<li>For quick getting started with the STM32CubeU5 firmware package, refer to <a href="https://www.st.com/resource/en/user_manual/um2883-getting-started-with-stm32cubeu5-for-stm32u5-series-stmicroelectronics.pdf">UM2883</a> you can download firmware updates and all the latest documentation from <a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/www.st.com/stm32cubeU5">www.st.com/stm32cubeU5</a></li>
+<li>For quick getting started with the STM32CubeU5 firmware package, refer to <a href="https://www.st.com/resource/en/user_manual/um2883-getting-started-with-stm32cubeu5-for-stm32u5-series-stmicroelectronics.pdf">UM2883</a> you can download firmware updates and all the latest documentation from <a href="https://www.st.com/stm32cubeU5">www.st.com/stm32cubeU5</a></li>
 <li>Below links to the most useful documents:
 <ul>
 <li><a href="https://www.st.com/resource/en/user_manual/um2883-getting-started-with-stm32cubeu5-for-stm32u5-series-stmicroelectronics.pdf">UM2883: Getting started with STM32CubeU5 for STM32U5 Series</a></li>
@@ -60,25 +59,8 @@
 <ul>
 <li><strong style="font-size: 1rem; color: var(--fore-color);"><br><br>Notes:</strong><br></li></ul>
 <ul>
-<li>The following sequence is needed to disable TrustZone:
-<ul>
-<li>Boot from user Flash memory:
-<ul>
-<li>Make sure that secure and non-secure applications are well loaded and executed (jump done on non-secure application)</li>
-<li>If not yet done, set RDP to level 1 through STM32CubeProgrammer. Then only Hotplug connection is possible during non-secure application execution</li>
-<li>Use a power supply different from ST-LINK in order to be able to connect to the target</li>
-<li>Uncheck the TZEN box and set RDP to level 0 (option byte value 0xAA), then click on Apply</li>
-</ul></li>
-<li>Boot from RSS:
-<ul>
-<li>Make sure to apply a high level on BOOT0 pin (make sure that nSWBOOT0 Option Byte is checked)</li>
-<li>If not yet done, set RDP to level 1 through STM32CubeProgrammer. Then only Hotplug connection is possible during non-secure application execution</li>
-<li>Use a power supply different from ST-LINK in order to be able to connect to the target</li>
-<li>Uncheck the TZEN box and set RDP to level 0 (option byte value 0xAA), then click on Apply</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>Please refer to AN5347 for more details</p><p><br></p>
+<li>This demo do not use Trust Zone, anyway for more details about TZ please refer to AN5347 
+</p><p><br></p>
 <h3 id="components"><strong>Components</strong></h3>
 <p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
 <table>
@@ -94,27 +76,32 @@
 <tr class="odd">
 <td style="text-align: left;">Cortex-M CMSIS</td>
 <td style="text-align: left;">V5.6.0_cm33</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/CMSIS/docs/General/html/index.html">release notes</a></td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/docs/General/html/index.html">release notes</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">STM32U5xx CMSIS <span class="icon-st-update"></span></td>
 <td style="text-align: left;">V1.1.0</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release notes</a></td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release notes</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">STM32U5xx HAL <span class="icon-st-update"></span></td>
 <td style="text-align: left;">V1.1.0</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release notes</a></td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release notes</a></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">STM32U5xx NUCLEO <span class="icon-st-update"></span></td>
-<td style="text-align: left;">V1.1.0</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release notes</a></td>
+
+
+
+
+<tr class="odd">
+<td style="text-align: left;">BSP B-U585I-IOT02A <span class="icon-st-update"></span></td>
+<td style="text-align: left;">v1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\B-U585I-IOT02A/Release_Notes.html">release notes</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span style="color: var(--table-body-fore-color); font-size: 0.9rem;">BSP B-U585I-IOT02A&nbsp;</span><br></td></tr>
-<tr class="odd">
-<td style="text-align: left;"><span style="color: var(--table-body-fore-color); font-size: 0.9rem;">BSP Common&nbsp;</span><br></td></tr>
+<td style="text-align: left;">BSP Common <span class="icon-st-update"></span></td>
+<td style="text-align: left;">v7.2.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\Common/Release_Notes.html">release notes</a></td>
+</tr>
 
 
 
@@ -126,17 +113,14 @@
 <tr class="even">
 <td style="text-align: left;">BSP mx_wifi <span class="icon-st-update"></span></td>
 <td style="text-align: left;">v2.1.12</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/Components/mx_wifi/Release_Notes.html">release notes</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/mx_wifi/Release_Notes.html">release notes</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">BSP mx25lm51245g <span class="icon-st-update"></span></td>
 <td style="text-align: left;">V2.0.8</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/Components/mx25lm51245g/Release_Notes.html">release notes</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/mx25lm51245g/Release_Notes.html">release notes</a></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">BSP ov5640 <span class="icon-st-update"></span></td>
-<td style="text-align: left;">V3.2.2</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Drivers/BSP/Components/ov5640/Release_Notes.html">release notes</a></td></tr>
+
 </tbody></table><br>
 <table>
 <caption><strong>Middlewares</strong></caption>
@@ -169,49 +153,20 @@
 <td style="text-align: left;"><a href="https://github.com/azure-rtos/netxduo/releases/tag/v6.1.9_rel">release notes</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">USBX <span class="icon-st-update"></span></td>
-<td style="text-align: left;">usbx-6.1.9.220128</td>
-<td style="text-align: left;"><a href="https://github.com/azure-rtos/usbx/releases/tag/v6.1.9_rel">release notes</a></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">FileX <span class="icon-st-update"></span></td>
 <td style="text-align: left;">filex-6.1.8.220128</td>
 <td style="text-align: left;"><a href="https://github.com/azure-rtos/filex/releases/tag/r6.1.8_rel">release notes</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">LevelX <span class="icon-st-update"></span></td>
 <td style="text-align: left;">levelx-6.1.9.220128</td>
 <td style="text-align: left;"><a href="https://github.com/azure-rtos/levelx/releases/tag/v6.1.9_rel">release notes</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">cmsis_rtos_threadx <span class="icon-st-update"></span></td>
-<td style="text-align: left;">tx-cmsis-1.0.4.211108</td>
-<td style="text-align: left;"><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Middlewares/ST/cmsis_rtos_threadx/Release_Notes.html">release notes</a></td>
-</tr>
 </tbody>
 </table>
-<table>
-<caption><strong>Utilities</strong></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">Version</th>
-<th style="text-align: left;">Release note</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><br><br></td></tr>
-</tbody>
-</table>
+
 <h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
 <ul>
-<li>IAR Embedded Workbench for ARM (EWARM) toolchain <strong>V8.50.9</strong> + ST-LINK, patches available here:
-<ul>
-<li><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Utilities/PC_Software/IDEs_Patches/EWARM/EWARMv8_STM32U57x-58x_V1.3.zip">Utilities\PC_Software\IDEs_Patches\EWARM\EWARMv8_STM32U57x-58x_V1.3.zip</a></li>
-<li>This patch supports STM32U575/585 devices</li>
-<li><a href="file:///C:/Temp/DEMO_MODULE_MANAGER_THREADX/DEMO_MODULE_MANAGER_THREADX/Utilities/PC_Software/IDEs_Patches/EWARM/EWARMv8_STM32U59x-5Ax_V1.0.zip">Utilities\PC_Software\IDEs_Patches\EWARM\EWARMv8_STM32U59x-5Ax_V1.0.zip</a></li>
-<li>This patch supports STM32U595/5A5/599/5A9 devices</li></ul></li>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain <strong>V9.20.1</strong> </li></ul></li>
 </ul>
 <h2 id="supported-devices-and-boards">Supported Devices and boards</h2>
 <ul>
