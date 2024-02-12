@@ -55,10 +55,10 @@ int32_t mxwifi_probe(void **ll_drv_context);
 
 #ifdef HOME_WIFI
 #define WIFI_SSID                                   "Vodafone-66704763"
-#define WIFI_PASSWORD                               "d8v4c784tl7wsi2"
+#define WIFI_PASSWORD                               ""
 #else
 #define WIFI_SSID                                   "SRA_Lab_Fastweb24"
-#define WIFI_PASSWORD                               "Sralabfastweb1$"
+#define WIFI_PASSWORD                               ""
 #endif
 
 /* DEBUG LOG */
